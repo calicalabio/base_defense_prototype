@@ -1,0 +1,104 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/fonts/loppu.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scripts/HUD.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 25
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 25
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 25
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="RoundNumberLabel" type="Label" parent="."]
+margin_left = 8.929
+margin_right = 60.929
+margin_bottom = 27.0
+custom_fonts/font = SubResource( 1 )
+text = "Round 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RoundTimerLabel" type="Label" parent="."]
+visible = false
+margin_left = 136.0
+margin_right = 223.0
+margin_bottom = 55.0
+custom_fonts/font = SubResource( 2 )
+text = "Time Left: 60
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CurrencyLabel" type="Label" parent="."]
+margin_left = 528.0
+margin_top = 8.0
+margin_right = 640.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 3 )
+text = "Currency: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KillCountLabel" type="Label" parent="."]
+margin_left = 528.0
+margin_top = 40.0
+margin_right = 640.0
+margin_bottom = 66.0
+custom_fonts/font = SubResource( 4 )
+text = "Kills: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerHealthLabel" type="Label" parent="."]
+margin_left = 416.0
+margin_top = 8.0
+margin_right = 497.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 5 )
+text = "Base HP: 100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonStartRound" type="Button" parent="."]
+margin_left = 248.0
+margin_top = 152.0
+margin_right = 392.0
+margin_bottom = 216.0
+text = "Start Round"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="ButtonStartRound" to="." method="_on_ButtonStartRound_pressed"]
